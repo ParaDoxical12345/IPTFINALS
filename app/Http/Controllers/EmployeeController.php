@@ -49,6 +49,9 @@ class EmployeeController extends Controller
 
         ]);
 
+        // event
+        event(new EmployeeCreate($request->firstName, $request->lastName));
+
         $user = User::create(array_merge($data, [
             'email_verified_at' => now(),
             'remember_token' => Str::random(10),

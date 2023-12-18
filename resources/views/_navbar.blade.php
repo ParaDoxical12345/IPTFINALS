@@ -42,6 +42,10 @@
                         </a>
                     @endif
 
+                    <a class="inline-block py-2 px-3 hover:bg-green-400 rounded-full" href="/logs">
+                            <div class="flex items-center relative text-white  cursor-pointer whitespace-nowrap">Logs</div>
+                        </a>
+
                 </div>
 
                 <div class="flex justify-end items-center relative">

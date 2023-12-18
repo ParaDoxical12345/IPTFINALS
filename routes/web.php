@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CashAdvanceController;
-use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\PayrollController;
-use App\Http\Controllers\PositionController;
 use App\Models\CashAdvance;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PayrollController;
+use App\Http\Controllers\UserLogController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\PositionController;
+use App\Http\Controllers\CashAdvanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,6 @@ Route::middleware(['auth', 'verified'])->group(function(){
 
 
 
-    // Route::get('/logs', [LogController::class, 'index'])->name('logs.index');
+    Route::get('/logs', [UserLogController::class, 'index'])->name('logs.index');
     // Route::get('/sendmail', [EmailController::class ,'sendEmail']);
 });
