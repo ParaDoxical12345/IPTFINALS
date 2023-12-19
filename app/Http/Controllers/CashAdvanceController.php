@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserLog;
 use App\Models\CashAdvance;
 use App\Models\CashAdvanceTotal;
 use App\Models\Employee;
@@ -35,6 +36,11 @@ class CashAdvanceController extends Controller
         ->whereHas('user', function ($query) {
             $query->where('status', 1); // Assuming 'status' is the field indicating the user's status
         })->get();
+
+        $log_entry = 'A new cash advance has been added.';
+
+        // event
+        event(new UserLog($log_entry));
 
         return view('cashAdvance.create',[
             'employees' => $employees

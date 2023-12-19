@@ -1,5 +1,5 @@
 <!-- component -->
-<nav class=" bg-green-500 w-full flex relative justify-between items-center mx-auto px-8 h-20">
+<nav class=" bg-blue-500 w-full flex relative justify-between items-center mx-auto px-8 h-20">
     <!-- logo -->
     <div class="inline-flex">
         <a class="_o6689fn" href="/"

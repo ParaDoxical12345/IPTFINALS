@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserLog;
 use App\Models\Position;
 use Illuminate\Http\Request;
 
@@ -36,6 +37,11 @@ class PositionController extends Controller
             'position'      => 'required|string',
             'rate'     => 'required|string',
         ]);
+
+        $log_entry = 'A new position has been added.';
+
+        // event
+        event(new UserLog($log_entry));
 
         Position::create($request->all());
 
