@@ -10,7 +10,7 @@ class UserLogController extends Controller
     public function index()
     {
         return view('logs', [
-            'logs' => Log::all()
+            'logs' => Log::with('user')->get()
         ]);
     }
 }

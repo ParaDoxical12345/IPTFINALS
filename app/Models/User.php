@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->hasMany(Employee::class, 'user_id');
     }
 
+    public function logs()
+    {
+        return $this->hasMany(Log::class);
+    }
+
     /**
      * The attributes that should be cast.
      *

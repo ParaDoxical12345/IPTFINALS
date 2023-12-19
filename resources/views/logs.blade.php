@@ -52,7 +52,7 @@
                                         </div>
                                     </td>
                                     <td class="px-5 py-5 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">{{ $log->user->name }}</p>
+                                        <p class="text-gray-900 whitespace-no-wrap">{{ $log->user->firstName . " " . $log->user->lastName }}</p>
                                     </td>
                                     <td class="px-5 py-5 bg-white text-sm">
                                         <p class="text-gray-900 whitespace-no-wrap">{{ $log->created_at->format('Y-m-d H:i:s') }}</p>

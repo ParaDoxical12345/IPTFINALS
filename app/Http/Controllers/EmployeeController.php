@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserLog;
 use App\Models\Employee;
 use App\Models\Position;
 use App\Models\User;
@@ -39,6 +40,8 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
+
+        // dd($request->all());
         $data = $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
@@ -49,8 +52,10 @@ class EmployeeController extends Controller
 
         ]);
 
+        $log_entry = 'A new employee has been added.';
+
         // event
-        event(new EmployeeCreate($request->firstName, $request->lastName));
+        event(new UserLog($log_entry));
 
         $user = User::create(array_merge($data, [
             'email_verified_at' => now(),
