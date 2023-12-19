@@ -5,7 +5,7 @@
         <a class="_o6689fn" href="/"
             ><div class="hidden md:flex items-center">
                 <img src="https://californiapayroll.com/wp-content/uploads/2022/01/payroll-banner-image.png" class="w-50 h-20" alt="Image">
-                <h1 class="text-white text-3xl font-bold">PayDayPal</h1>
+                <h1 class="text-white text-3xl font-bold">WageWise Hub</h1>
             </div>
         </a>
     </div>

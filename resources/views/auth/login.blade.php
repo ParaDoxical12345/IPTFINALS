@@ -5,7 +5,7 @@
     <div class="min-w-screen min-h-screen bg-gray-50 flex items-center justify-center px-5 py-5">
         <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
             <div class="md:flex w-full">
-                <div class="w-full md:w-1/2 flex justify-center items-center bg-green-500">
+                <div class="w-full md:w-1/2 flex justify-center items-center bg-blue-300">
                     <img src="https://californiapayroll.com/wp-content/uploads/2022/01/payroll-banner-image.png">
                 </div>
                 <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
